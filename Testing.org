@@ -1,0 +1,20 @@
+#+begin_src mermaid :file test.png
+graph LR
+   ida(syncapp) --> idA1{{HomeScreenActivity}} --> id1([LoginFragment]) & id2([DatabaseUpgradeActivity])
+   idb(barcodescanner) --> idA2{{BarcodeAppUtil}} --> id3([ScanFragment]) & id4([SelectAdditionalAccessoryFragment])
+   idc(camerax) --> idA3{{PhotoRequester}} --> id5([ComponentActivityBaseForeignReadingFragment]) & id6([BaseVolumeMeterVisualFragment]) & id7([EffortsBottomSheetDialogFragment]) & id8([SvoBottomSheetDialogFragment]) & id9([BaseRepairFragment]) & id10([RequiredPhotosActivity])
+   idd(meter) --> idA4{{FasUlkMetering}} --> idA5{{MeeteringUtil}} --> id11([FasUlkInstallationFragment]) & id12([FasUlkInventoryFragment]) & id13([FasUlkRemoveFragment])
+   ide(mail) --> id14([FeedbackDialogFragment]) & id15([MaintenanceLogFragment])
+   idf(mtool) -->  idA6{{BaseActivity}} --> id16([AppCompatActivity])
+   idf(mtool) --> id17([BaseActivity2])
+   idh(thtool) --> id18([BaseDeviceClassificationFragment]) & id19([DeviceClassificationFragment])
+   idh(thtool) --> idA7{{ThermowellUtil}} --> idA8{{ThermowellCompatibilityController}} --> idA9{{ClassificationViewModel}} --> id20([DeviceClassificationFragment])
+   idi(tutorial) --> id21([HomeScreenActivity])
+
+   classDef classGreen fill:#B3FC94;
+   class id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,id14,id15,id16,id17,id18,id19,id20,id21 classGreen;
+   classDef classBlue fill:#87cefa
+   class ida,idb,idc,idd,ide,idf,idg,idh,idi classBlue;
+   classDef classYellow fill:#F9F871;
+   class idA1,idA2,idA3,idA4,idA5,idA6,idA7,idA8,idA9 classYellow; 
+#+end_src
